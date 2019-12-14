@@ -1,0 +1,54 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+body {
+  color: white;
+}
+
+.container {
+  position: fixed;
+  z-index: 2;
+  top: 100px;
+  left: 10%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  align-items: center;
+  text-align: center;
+}
+
+.searchField {
+  margin: 0 auto;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  color: white;
+  width: 50%;
+}
+
+#first_name2 {
+  text-align: center;
+}
+
+.cityWeather {
+  text-align: center;
+}
+
+.forecast {
+  text-align: center;
+}
+
+label {
+  color: white;
+}
+input {
+  color: white;
+}

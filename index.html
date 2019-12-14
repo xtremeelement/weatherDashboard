@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="assets/Time Lapse Video Of Cars Passing On A Rainy Day.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 header">
+          <h1>Enter City</h1>
+        </div>
+      </div>
+      <div class="row searchField">
+        <div class="input-field col s12">
+          <input
+            value=""
+            id="first_name2"
+            type="text"
+            class="validate"
+            onchange="queryResult()"
+          />
+          <label class="active cityLabel" for="first_name2">City</label>
+        </div>
+      </div>
+      <div class="row cityWeather"></div>
+      <div class="row forecast"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
