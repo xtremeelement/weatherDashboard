@@ -7,7 +7,7 @@ forecast = document.querySelector(".forecast");
 
 function queryResult() {
   var city = document.querySelector("#first_name2").value;
-  var queryUrl2 = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}`;
+  var queryUrl2 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}`;
   console.log(city);
   fetch(queryUrl2)
     .then(function(response) {
@@ -22,7 +22,7 @@ function queryResult() {
 
 function getWeather() {
   var city = document.querySelector("#first_name2").value;
-  var queryUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${key}`;
+  var queryUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${key}`;
   fetch(queryUrl)
     .then(function(something) {
       return something.json();
@@ -39,7 +39,7 @@ function updateWeather() {
   var currentWeather;
   var icon = weatherData.weather[0].icon;
   var temperature = ((weatherData.main.temp - 273.15) * 9) / 5 + 32;
-  var iconUrl = `http://openweathermap.org/img/w/${icon}.png`;
+  var iconUrl = `https://openweathermap.org/img/w/${icon}.png`;
   currentWeather = `
     <h4>${weatherData.weather[0].main}</h4>
     <img src = "${iconUrl}">
@@ -55,7 +55,7 @@ function getForecast() {
   while (i < 5) {
     var temperature = ((forecastData.list[i].main.temp - 273.15) * 9) / 5 + 32;
     var iconIMG = forecastData.list[0].weather[0].icon;
-    var iconUrl = `http://openweathermap.org/img/w/${iconIMG}.png`;
+    var iconUrl = `https://openweathermap.org/img/w/${iconIMG}.png`;
     forecastWeather = `
     <div class="col s2">        
         <h3>${forecastData.list[i].weather[0].main}</h3>
